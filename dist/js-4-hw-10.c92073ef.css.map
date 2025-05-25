@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAIA","sources":["src/css/style.css"],"sourcesContent":["body {\n    background-color: rgb(105, 105, 105);\n}\n\n.interval5 {\n    font-size: 50px;\n    color: aliceblue;\n}"],"names":[],"version":3,"file":"js-4-hw-10.c92073ef.css.map","sourceRoot":"/__parcel_source_root/"}

@@ -1,0 +1,30 @@
+{
+  "name": "js-4-hw-10",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel src/index.html",
+    "build": "parcel build src/index.html --no-cache --public-url './'",
+    "deploy": "gh-pages -d dist --branch gh-pages",
+    "predeploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark-ua-top/js-4-hw-10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mark-ua-top/js-4-hw-10/issues"
+  },
+  "homepage": "https://github.com/mark-ua-top/js-4-hw-10#readme",
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "handlebars": "^4.7.8",
+    "parcel": "^2.14.4",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^2.0.1"
+  }
+}
