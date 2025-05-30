@@ -6,3 +6,46 @@ body {
     font-size: 50px;
     color: aliceblue;
 }
+/* task2-3 */
+.click-sniya {
+    position: absolute;
+    max-width: calc(100vw - 150px);
+    max-height: calc(100vh - 150px);
+    background-color: transparent;
+    border: none;
+}
+
+.sniya {
+    height: 150px;
+
+}
+.count {
+    font-size: 50px;
+    color: aliceblue;
+}
+.badge {
+    font-size: 70px; 
+    color: aliceblue;
+}
+/* task4 */
+#timer {
+    height: 50px;
+    font-size: 50px;
+    background-color: transparent;
+    color: aliceblue;
+    border: none;
+  }
+  
+  #timer:hover {
+    color: aliceblue;
+  }
+  
+  #butSubmit {
+    height: 50px;
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  

@@ -668,12 +668,48 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"6kb64":[function(require,module,exports,__globalThis) {
 let interval5 = document.querySelector(".interval5");
-let i = 1;
+let sniya = document.querySelector(".sniya");
+let clickSniya = document.querySelector(".click-sniya");
+let clickerCount = document.querySelector(".count");
+let badge = document.querySelector(".badge");
+const form = document.getElementById("sendTimer");
+const input = document.getElementById("timer");
+let i = 0;
 let interval = setInterval(()=>{
     interval5.innerHTML = i + " \u0456\u043D\u0442\u0435\u0440\u0432\u0430\u043B";
     i++;
     if (i > 5) clearInterval(interval);
 }, 1000);
+// task 2-3
+let clickCount = 0;
+let interval2 = setInterval(()=>{
+    let left = Math.random() * 100;
+    let top = Math.random() * 100;
+    clickSniya.style.left = left + "%";
+    clickSniya.style.top = top + "%";
+}, 1000);
+clickSniya.addEventListener("click", ()=>{
+    clickCount++;
+    clickerCount.innerHTML = clickCount;
+    if (clickCount >= 10) {
+        clearInterval(interval2);
+        clickSniya.style.left = "50%";
+        clickSniya.style.top = "50%";
+        badge.innerHTML = "\u0412\u0456\u0442\u0430\u044E! \u0422\u0438 \u043D\u0430\u0442\u0438\u0441\u043D\u0443\u0432 10 \u0440\u0430\u0437\u0456\u0432 \u043D\u0430 \u043A\u043E\u0442\u0430 \u0439 \u043E\u0442\u0440\u0438\u043C\u0430\u0432 \u0437\u0432\u0430\u043D\u043D\u044F \u043D\u0430\u0439\u0448\u0432\u0438\u0434\u0448\u043E\u0457 \u0440\u0443\u043A\u0438 \u043D\u0430 \u0414\u0438\u043A\u043E\u043C\u0443 \u0417\u0430\u0445\u043E\u0434\u0456!";
+    }
+});
+// task4
+form.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    const seconds = input.value;
+    if (isNaN(seconds) || seconds <= 0) {
+        alert("\u0427\u0435\u0435\u043B \u0432\u0432\u0435\u0434\u0438 \u043D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u0435 \u0447\u0438\u0441\u043B\u043E");
+        return;
+    }
+    setTimeout(()=>{
+        alert(`\u{41C}\u{43E}\u{43B}\u{43E}\u{434}\u{435}\u{446}\u{44C}! \u{422}\u{438} \u{432}\u{438}\u{442}\u{440}\u{438}\u{43C}\u{430}\u{432} ${seconds} \u{441}\u{435}\u{43A}\u{443}\u{43D}\u{434}!`);
+    }, seconds * 1000);
+});
 
 },{}]},["6DHTQ","6kb64"], "6kb64", "parcelRequire0a59", {})
 
